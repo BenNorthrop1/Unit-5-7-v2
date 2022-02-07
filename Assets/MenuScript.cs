@@ -12,47 +12,60 @@ public class MenuScript : MonoBehaviour
     public GameObject settings;
     public GameObject menu;
 
+    public GameObject start;
+
 
     void Start()
     {
-        menu.SetActive(true);
-        settings.SetActive(false);
         anim = GetComponent<Animator>();
-        anim.SetBool("START" , true);
+
+        start.SetActive(true);
+        menu.SetActive(false);
+        settings.SetActive(false);
+        anim.SetBool("Start",false);
+      
     }
 
     void Update()
     {
-        
+          if(Input.anyKey == true)
+        {
+            anim.SetBool("Start" , true);
+            start.SetActive(false);
+        }
     }
 
     public void play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        anim.SetBool("START" , false);
+        
     }
 
     public void Quit()
     {
         Application.Quit();
-        anim.SetBool("START" , false);
+        
     }
 
     public void Back()
     {
         settings.SetActive(false);
         menu.SetActive(true);
-        anim.SetBool("START" , false);
+        
     }
 
     public void Settings()
     {
 
-        anim.SetBool("START" , false);
+        
         menu.SetActive(false);
         settings.SetActive(true);
     }
 
+    public void TitleAnimation()
+    {
+        
+    }
 
 
 

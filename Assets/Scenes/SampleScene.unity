@@ -1090,8 +1090,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49213065d644331468eabbdb0bf133b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camAnim: {fileID: 963194232}
   settings: {fileID: 129791014}
   menu: {fileID: 295069017}
+  Mainmenu: {fileID: 1828207883}
+  titleText: {fileID: 1044674850}
   start: {fileID: 1643600525}
 --- !u!95 &909318622
 Animator:
@@ -1127,6 +1130,7 @@ GameObject:
   - component: {fileID: 963194230}
   - component: {fileID: 963194231}
   - component: {fileID: 963194232}
+  - component: {fileID: 963194233}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1327,6 +1331,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &963194233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3e98e82099dd646b0b38dedebeda10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ms: {fileID: 0}
 --- !u!1 &1004539075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,7 +1445,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: -610, y: 470}
-  m_SizeDelta: {x: 500, y: -0.114990234}
+  m_SizeDelta: {x: 1800, y: -0.114990234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1044674852
 MonoBehaviour:
@@ -1450,7 +1467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Medieval \nMenu"
+  m_text: Medieval Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce284abdd1ac0f24eaaef65536eb72c7, type: 2}
   m_sharedMaterial: {fileID: 2269416398428416753, guid: ce284abdd1ac0f24eaaef65536eb72c7,
@@ -1460,8 +1477,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280166080
-  m_fontColor: {r: 0.754717, g: 0.15034072, b: 0.11747954, a: 1}
+    rgba: 4287630736
+  m_fontColor: {r: 0.5647059, g: 0.050980397, b: 0.5647059, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1478,8 +1495,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 120
-  m_fontSizeBase: 120
+  m_fontSize: 180
+  m_fontSizeBase: 180
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1514,7 +1531,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 85.12717, w: -240.40204}
+  m_margin: {x: 716.4456, y: 0, z: 85.12717, w: -240.40204}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2519,7 +2536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1828207884
 RectTransform:
   m_ObjectHideFlags: 0

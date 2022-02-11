@@ -6125,3 +6125,10 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 [C:\buildslave\unity\build\Editor/Src/SceneManager/EditorSceneManager.cpp line 672]
 
  -> (artifact id: 'ff9056fe4db90c2d44882dfe4fef188d') in 0.325018 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 169.029667 seconds.
+  path: Assets/render.asset
+  artifactKey: Guid(b0af4e3b5727e264c9260f8217331502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/render.asset using Guid(b0af4e3b5727e264c9260f8217331502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8be5090d9c4186696a2c48150c1587b8') in 0.009436 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -1343,7 +1343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3e98e82099dd646b0b38dedebeda10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ms: {fileID: 0}
+  ms: {fileID: 909318621}
 --- !u!1 &1004539075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,16 +1469,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Medieval Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ce284abdd1ac0f24eaaef65536eb72c7, type: 2}
-  m_sharedMaterial: {fileID: 2269416398428416753, guid: ce284abdd1ac0f24eaaef65536eb72c7,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287630736
-  m_fontColor: {r: 0.5647059, g: 0.050980397, b: 0.5647059, a: 1}
+    rgba: 4278231807
+  m_fontColor: {r: 1, g: 0.63447744, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1501,7 +1500,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 4
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

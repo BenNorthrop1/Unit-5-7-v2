@@ -99,12 +99,12 @@ MonoBehaviour:
     m_Value: 0.99
   contrast:
     m_OverrideState: 1
-    m_Value: 1.54
+    m_Value: 19
     min: -100
     max: 100
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.87385446, b: 0.8160377, a: 1}
+    m_Value: {r: 0.80397826, g: 0.8205903, b: 0.8396226, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 80.68
+    m_Value: 61
     min: -100
     max: 100
 --- !u!114 &4257531750929753664
@@ -160,15 +160,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   threshold:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.9
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0
     min: 0
   scatter:
     m_OverrideState: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.472
+    m_Value: 0.416
     min: 0
     max: 1
   smoothness:

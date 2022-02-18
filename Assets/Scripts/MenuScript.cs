@@ -1,93 +1,101 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
 
+    public GameObject beginning;
 
-    Animator anim;
+    public GameObject mainMenu;
 
-    public Animator camAnim;
+    public GameObject settingMenu;
+
+    public GameObject controlsMenu;
+
+    public GameObject creditsMenu;
+
+    public GameObject quitMenu;
+
+    public CinemachineBrain mainCamera;
+
+    public CinemachineVirtualCamera cam_1;
+
+    public CinemachineVirtualCamera cam_2;
+
+    public Animator anim;
 
 
 
-    public GameObject settings;
-    public GameObject menu;
-
-    public GameObject Mainmenu;
-
-    public GameObject titleText;
-    public GameObject start;
-
-
+  
     void Start()
     {
-        anim = GetComponent<Animator>();
-
-        start.SetActive(true);
-        menu.SetActive(false);
-        settings.SetActive(false);
-        titleText.SetActive(false);
+        beginning.SetActive(true);
+        mainMenu.SetActive(false);
+        settingMenu.SetActive(false);
       
     }
 
     void Update()
     {
-          if(Input.anyKey)
+      
+        if(Input.anyKeyDown && beginning.activeInHierarchy)
         {
-            camAnim.SetBool("Start" , true);
-            start.SetActive(false);
 
-            Mainmenu.SetActive(true);
-            
+            beginning.SetActive(false);
+            mainMenu.SetActive(true);
+
+            cam_1.gameObject.SetActive(false);
+            cam_2.gameObject.SetActive(true);
+
         }
     }
 
-    public void play()
+    public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
-        
-    }
-
-    public void Back()
-    {
-        settings.SetActive(false);
-        menu.SetActive(true);
-        
     }
 
     public void Settings()
     {
-
-        
-        menu.SetActive(false);
-        settings.SetActive(true);
+        settingMenu.SetActive(true);
+        controlsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
+        quitMenu.SetActive(false);
     }
 
-    public void TitleAnimation()
+    public void Controls()
     {
-        titleText.SetActive(true);
-        anim.SetBool("TitleStart", true);
+        settingMenu.SetActive(false);
+        controlsMenu.SetActive(true);
+        creditsMenu.SetActive(false);
+        quitMenu.SetActive(false);
+    }
+    
+    public void Credits()
+    {
+        settingMenu.SetActive(false);
+        controlsMenu.SetActive(false);
+        creditsMenu.SetActive(true);
+        quitMenu.SetActive(false);
     }
 
-    public void MenuAnimation()
+    public void Quit()
+    {
+        settingMenu.SetActive(false);
+        controlsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
+        quitMenu.SetActive(true);
+    }
+
+    public void MenuAnim()
     {
 
+        anim.SetBool("Start" , true);
+
     }
-
-
-
-
-
-
 
 
 }

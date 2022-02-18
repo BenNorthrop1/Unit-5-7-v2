@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 8e97868d92337b74eabe05cc87da701a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Modern Royale
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4595bfab229b21a42ab9f445033a2196, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

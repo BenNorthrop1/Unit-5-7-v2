@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 543b92e59edaf0b4f90ff365f8047ce7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Rotterham
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 81b78aa5bd5b0e845b068f26dde8cbce, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

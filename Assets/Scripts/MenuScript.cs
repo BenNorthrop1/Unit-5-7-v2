@@ -33,8 +33,10 @@ public class MenuScript : MonoBehaviour
     void Start()
     {
         beginning.SetActive(true);
-        mainMenu.SetActive(false);
         settingMenu.SetActive(false);
+        controlsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
+        quitMenu.SetActive(false);
       
     }
 
@@ -97,5 +99,17 @@ public class MenuScript : MonoBehaviour
 
     }
 
+    public void Back()
+    {
+        settingMenu.SetActive(false);
+        controlsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
+        quitMenu.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 
 }

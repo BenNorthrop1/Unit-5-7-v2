@@ -11,6 +11,8 @@ public class MenuScript : MonoBehaviour
 
     public GameObject mainMenu;
 
+    public GameObject playMenu;
+
     public GameObject settingMenu;
 
     public GameObject controlsMenu;
@@ -33,6 +35,7 @@ public class MenuScript : MonoBehaviour
     void Start()
     {
         beginning.SetActive(true);
+        playMenu.SetActive(false);
         settingMenu.SetActive(false);
         controlsMenu.SetActive(false);
         creditsMenu.SetActive(false);
@@ -60,12 +63,23 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void Playmenu()
+    {
+        settingMenu.SetActive(false);
+        controlsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
+        quitMenu.SetActive(false);
+        playMenu.SetActive(true);
+    }
+
+
     public void Settings()
     {
         settingMenu.SetActive(true);
         controlsMenu.SetActive(false);
         creditsMenu.SetActive(false);
         quitMenu.SetActive(false);
+        playMenu.SetActive(false);
     }
 
     public void Controls()
@@ -74,6 +88,7 @@ public class MenuScript : MonoBehaviour
         controlsMenu.SetActive(true);
         creditsMenu.SetActive(false);
         quitMenu.SetActive(false);
+        playMenu.SetActive(false);
     }
     
     public void Credits()
@@ -82,6 +97,7 @@ public class MenuScript : MonoBehaviour
         controlsMenu.SetActive(false);
         creditsMenu.SetActive(true);
         quitMenu.SetActive(false);
+        playMenu.SetActive(false);
     }
 
     public void Quit()
@@ -90,6 +106,7 @@ public class MenuScript : MonoBehaviour
         controlsMenu.SetActive(false);
         creditsMenu.SetActive(false);
         quitMenu.SetActive(true);
+        playMenu.SetActive(false);
     }
 
     public void MenuAnim()
@@ -105,6 +122,7 @@ public class MenuScript : MonoBehaviour
         controlsMenu.SetActive(false);
         creditsMenu.SetActive(false);
         quitMenu.SetActive(false);
+        playMenu.SetActive(false);
     }
 
     public void QuitGame()

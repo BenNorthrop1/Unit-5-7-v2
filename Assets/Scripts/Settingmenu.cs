@@ -8,52 +8,51 @@ using TMPro;
 public class Settingmenu : MonoBehaviour
 {
 
-    public AudioClip[] clips;
-    public AudioSource vfx;
-    public AudioSource music;
-    public AudioSource master;
+    private float pMasterVolume, pMusicVolume, pVfxVolume;
 
+    public Slider masterSlider, musicSlider, vfxSlider;
+
+
+    public AudioClip[] clips;
+    public AudioSource musicSource, vfxSource;
     public AudioMixer audioMixer;
 
-
-    private float pMasterVolume, pVfxVolume, pMusicVolume;
-
-    
-
-    public Slider masterSlider;
-
-    public Slider vfxSlider;
-
-    public Slider musicSlider;
-    
+    private bool isCreepy = false;
    
     public TMP_Dropdown resolutionDropdown;
 
     Resolution[] resolutions;
 
+
+    enum Sounds
+    {
+        music,//0
+        ding,//1
+        click,//2
+
+
+
+
+
+    };
+
     void Start()
     {
-        pMasterVolume = PlayerPrefs.GetFloat("playerMasterVolume",0);
+        pMasterVolume = PlayerPrefs.GetFloat("playerMasterVolume", 0);
+        pMusicVolume = PlayerPrefs.GetFloat("playerMusicVolume", 0);
+        pVfxVolume = PlayerPrefs.GetFloat("playerVfxVolume", 0);
+        audioMixer.SetFloat("masterVolume", pMasterVolume);
+        audioMixer.SetFloat("musicVolume", pMusicVolume);
+        audioMixer.SetFloat("vfxVolume", pVfxVolume);
+        masterSlider.value = pMasterVolume;
+        musicSlider.value = pMusicVolume;
+        vfxSlider.value = pVfxVolume;
+        musicSource.PlayOneShot(clips[(int)Sounds.music], 0.2f);
 
-        pMusicVolume = PlayerPrefs.GetFloat("playerMusicVolume",0);
-
-        pVfxVolume = PlayerPrefs.GetFloat("playerVfxVolume",0);
-
-        audioMixer.SetFloat("MasterVol",pMasterVolume);
-
-        audioMixer.SetFloat("VfxVol",pVfxVolume);
-
-        audioMixer.SetFloat("MusicVol",pMusicVolume);
 
         resolutions = Screen.resolutions;
 
-        masterSlider.value = pMasterVolume;
-
-        vfxSlider.value = pVfxVolume;
-
-        musicSlider.value = pMusicVolume;
-
-        music.PlayOneShot(clips[0],0.7f);
+      
 
         resolutionDropdown.ClearOptions();
 
@@ -103,25 +102,11 @@ public class Settingmenu : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
+    public void PlayVFXSound(int clipNumber) => vfxSource.PlayOneShot(clips[clipNumber]);
+     public void PlayMusicSound(int clipNumber) => musicSource.PlayOneShot(clips[clipNumber]);
+    public void SetVolumeMaster(float volume) => audioMixer.SetFloat("masterVolume", volume);
+    public void SetVolumeMusic(float volume) => audioMixer.SetFloat("musicVolume", volume);
+    public void SetVolumeVfx(float volume) => audioMixer.SetFloat("vfxVolume", volume);
 
 
-    public void SetVolume(float volume) 
-    {
-        PlayerPrefs.SetFloat("playerMasterVolume", volume);
-        audioMixer.SetFloat("MasterVolume",volume);
-    }
-
-  public void PlaySound(int clipNumber, int output) 
-{
-    switch(output)
-     {
-        
-        case 0:
-              music.PlayOneShot(clips[clipNumber]);
-              break;
-        case 1:
-              vfx.PlayOneShot(clips[clipNumber]);
-              break;
-    }
-}
 }

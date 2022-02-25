@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.SceneManagement;
+using static Settingmenu;
 
 public class MenuScript : MonoBehaviour
 {
@@ -65,6 +66,7 @@ public class MenuScript : MonoBehaviour
 
     public void Playmenu()
     {
+        
         settingMenu.SetActive(false);
         controlsMenu.SetActive(false);
         creditsMenu.SetActive(false);

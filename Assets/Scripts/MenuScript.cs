@@ -46,16 +46,23 @@ public class MenuScript : MonoBehaviour
 
     void Update()
     {
-      
+        
         if(Input.anyKeyDown && beginning.activeInHierarchy)
         {
 
             beginning.SetActive(false);
             mainMenu.SetActive(true);
 
+            anim.SetBool("Start" , true);
+
             cam_1.gameObject.SetActive(false);
             cam_2.gameObject.SetActive(true);
 
+        }
+
+        else
+        {
+             anim.SetBool("Start" , false);
         }
     }
 
